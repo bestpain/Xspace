@@ -11,7 +11,7 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:5000]
 
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[deployment](https://xspace-ssr.herokuapp.com/) for more information.
 
 It is a Server Side Rendered App.So on visiting the homepage(localhost:5000) and static HTML file is served.
 I am making the API call after the first JS file is send to the client because it makes the loading faster compared to making an api call with the HTML file.
