@@ -18,45 +18,16 @@ const LogoContainer = styled(Link)`
   }
 `;
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.headerRef = React.createRef();
-  }
-
-  componentDidMount() {
-    if (window != undefined) {
-      window.addEventListener("scroll", () => {
-        const top = window.scrollY > 0;
-        if (top) {
-          this.headerRef.current.style.position = "fixed";
-        } else {
-          this.headerRef.current.style.position = "";
-        }
-      });
-    }
-  }
-
-  componentWillUnmount() {
-    if (window != undefined) {
-      window.removeEventListener("scroll");
-    }
-  }
-
   render() {
     return (
       <div
         id="header"
         className="header"
         style={{
-          backgroundColor: "#f1f1f1",
           display: "flex",
-          minHeight: "45px",
           alignItems: "center",
-          width: "100%",
-          zIndex: "2",
-          transition: "0.25s ",
+          zIndex: "100",
         }}
-        ref={this.headerRef}
       >
         <LogoContainer to="/">SpaceX Launch Programs</LogoContainer>
       </div>
