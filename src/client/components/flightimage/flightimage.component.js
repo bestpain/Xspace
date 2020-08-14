@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 const FlightImageContainer = styled.div`
 background-color:#f1f1f1;
-width: 75%;
 height:40%;
 margin-top:13px;
 display:flex;
 flex-direction:column;
 align-items:center;
+width: 85%;
 }
 `;
 
