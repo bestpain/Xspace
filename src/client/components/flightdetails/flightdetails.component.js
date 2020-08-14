@@ -2,20 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const FlightDetailsContainer = styled.div`
-width: 70%;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-padding: 10px 20px;
-background-color:white;
+padding: 0 20px;
 }
 `;
 
 const FlightDetails = styled.p`
   font-size: 18px;
   font-weight: bold;
-  color: black;
 `;
 
 const FlightDetail = ({
