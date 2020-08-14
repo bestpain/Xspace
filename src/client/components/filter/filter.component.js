@@ -5,27 +5,21 @@ import LaunchFilter from "../launchfilter/launchfilter.component";
 import LandingFilter from "../landingfilter/landingfilter.component";
 
 const FilterContainer = styled.div`
-  width: 240px;
-  min-width: 240px;
-  background-color: #f1f1ff1;
+  z-index: 50;
+  width: 16rem;
 `;
 
 const FilterComponent = styled.div`
-  width: 220px;
-  min-width: 220px;
-  background-color: white;
-  height: 80%;
   border-radius: 6px;
-  display:flex;
-  flex-direction:column;
-  margin:10px;
-  position: fixed;
+  margin: 10px;
+  background-color: white;
+  margin: 5px 10px;
 `;
 
 const FilterHeading = styled.div`
   font-size: 18px;
   font-weight: bold;
-  padding:6px;
+  padding: 6px;
 `;
 
 //SideBar filter component
