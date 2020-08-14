@@ -48,3 +48,8 @@ const Html = ({ content, styles, store }) => `
 
 export default Html;
 
+// background-color:rgb(241, 241, 241);
+// overflow-x:hidden;
+// height:100%;
+// display:flex;
+// box-sizing:border-box;

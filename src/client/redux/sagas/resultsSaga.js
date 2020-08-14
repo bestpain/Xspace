@@ -1,4 +1,4 @@
-import { takeEvery, call, fork, put, takeLatest } from "redux-saga/effects";
+import { takeEvery, call, fork, put, takeLatest,take } from "redux-saga/effects";
 import * as actions from "../actions/actionTypes";
 import { fetchAllLaunches, fetchError } from "../actions";
 import { fetchLaunchesAPI, fetchFilteredLaunchesAPI } from "../../../api";
@@ -31,7 +31,12 @@ function* getFilteredLaunches(action) {
 }
 
 function* watchFetchFilteredLaunchesRequests() {
-  yield takeLatest(actions.GET_FILTERED_LAUNCHES_REQUEST, getFilteredLaunches);
+  while (true) {
+    const action = yield take(actions.GET_FILTERED_LAUNCHES_REQUEST);
+    //action will be whatever our action creator returns
+    yield call(getFilteredLaunches, action);
+  }
+  //yield take(actions.GET_FILTERED_LAUNCHES_REQUEST, getFilteredLaunches);
 }
 
 const SpaceSagas = [

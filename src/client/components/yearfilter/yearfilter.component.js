@@ -9,12 +9,9 @@ const YearFilterContainer = styled.div`
 `;
 
 const LaunchYearHeading = styled.span`
-  font-size: 15px;
-  padding: 3px;
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-color: darkgray;
-  width: 40%;
 `;
 const YearFilter = () => {
   return (

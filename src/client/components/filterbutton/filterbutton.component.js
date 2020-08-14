@@ -5,7 +5,7 @@ const ButtonContainer = styled.button`
   width: 38%;
   background-color: ${(props) => (props.active ? "#006400" : "#9acd32"  )};
   color: black;
-  padding: 7px;
+  padding: 5px;
   text-decoration: none;
   margin: 6px 3px;
   transition-duration: 0.4s;
