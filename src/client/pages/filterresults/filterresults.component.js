@@ -11,8 +11,14 @@ import {
 import { Helmet } from "react-helmet";
 
 const ContentContainer = styled.div`
-  height: 100%;
-  display: flex;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: auto 1fr;
+
+  @media screen and (max-width: 400px) {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
 `;
 
 function useQuery() {
