@@ -4,13 +4,16 @@ import styled from "styled-components";
 import FlightCard from "../../components/flightcard/flightcard.component";
 import Spinner from "../loading-spinner/spinner.component";
 
+const ContentContainer = styled.div`
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
+
 const ResultContainer = styled.div`
   display: flex;
-  background-color: #f1f1f1;
-  height: max-content;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap:wrap;
   justify-content: space-evenly;
-  width: 100%;
 `;
 
 //this displays all the data fetched from API
@@ -22,9 +25,11 @@ class Results extends React.Component {
   };
   render() {
     return (
-      <ResultContainer>
-        {this.props.Launches.length ? this.renderRockets() : <Spinner />}
-      </ResultContainer>
+      <ContentContainer>
+        <ResultContainer>
+          {this.props.Launches.length ? this.renderRockets() : <Spinner />}
+        </ResultContainer>
+      </ContentContainer>
     );
   }
 }
