@@ -4,15 +4,16 @@ import FlightImage from "../flightimage/flightimage.component";
 import FlightDetails from "../flightdetails/flightdetails.component";
 
 const CardContainer = styled.div`
-width: 18vw;
 display: flex;
 flex-direction: column;
-height: 350px;
+width: 290px;
+min-width: 290px;
+background: #fff;
+border-radius: .28571429rem;
+box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5;
+height: 420px;
 align-items: center;
-background-color:white;
-border-radius:6px;
-height:450px;
-margin-top:10px;
+margin:5px;
 }
 `;
 const FlightCard = ({ flight }) => {
